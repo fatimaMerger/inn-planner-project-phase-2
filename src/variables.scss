@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+$import-theme-font: Roboto;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+$base-font: 'Poppins', sans-serif;
+$heading-font: 'Poppins', sans-serif;
+
+/*** Color Variables *****/
+$dark: #13192d;
+$light: #f9f9f9;
+$light-gray: #eff4f5;
+$white: #fff;
+$black: rgb(0, 0, 0);
+$primary: #00BFFF ;
+$light-primary: #a8e9ff;
+$clight-primary: #a8e9ff;
+$xlight-primary: #f5fbfc;
+$primary-hover: #00BFFF ;
+$secondary: #214F76;
+$secondary-hover: #214F76;
+$placeholder-color: #b7b9c1;
+$alert: #d0031c;
+$pending: #ff7a0a;
+$close: #1f60c3;
+$red: #d0031c;
+$success-green: #52c41a;
+$blue: #0053af;
+$light-blue: #f2fffe;
+$btn-primary:#0898E1;
+$primary-ghost: #e4f8f9;
+
+$top-nav-color: #fff;
+$dark-text-clr: #13171f;
+$gray-text-clr: #656c78;
+$gray-text-clr-1: #616b7d;
+$mgray-text-clr: #7e828c;
+$mgray-text-clr-1: #7d8494;
+$lgray-text-clr: #acb2be;
+$footer-bg: #214F76;
+$footer-text-clr: #fff;
+
+$left-nav-clr: #12161f;
+$left-nav-icon: #515b72;
+
+$input-bg: #fcfcfc;
+$input-b-clr: #e8e8e8;
+$input-br-clr: #ccd8db;
+$input-lbl-clr: #566074;
+$checkbox-txt-clr: #5f636c;
+
+$modal-h-clr: #3b414d;
+$detail-bg: #f9f9f9;
+
+

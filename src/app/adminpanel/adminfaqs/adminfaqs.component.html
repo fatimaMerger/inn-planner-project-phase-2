@@ -1,0 +1,214 @@
+<div class="outer-section">
+    <div nz-row>
+        <div nz-col nzSpan="8">
+            <div class="filter-dropdown-search" >
+                <nz-form-item class="m-b-0 ">
+                  <nz-form-control>
+                    <div class="d-flex">
+                    <button nz-button nz-dropdown nzTrigger="click" [nzDropdownMenu]="filtermenu" [nzPlacement]="'bottomRight'">
+                    All <i nz-icon nzType="down"></i>
+                    </button>
+                    <nz-dropdown-menu #filtermenu="nzDropdownMenu">
+                      <ul nz-menu>
+                        <li nz-menu-item>All</li>
+                        <li nz-menu-item>Fee</li>
+                        <li nz-menu-item>Information</li>
+                        <li nz-menu-item>Meeting</li>
+                        <li nz-menu-item>Financial Planning</li>
+                        <li nz-menu-item>Miscellaneous</li>
+                      </ul>
+                    </nz-dropdown-menu>
+                    <nz-input-group nzPrefixIcon="search">
+                      <input nz-input placeholder="Search" />
+                    </nz-input-group>
+                  </div>
+                  </nz-form-control>
+                </nz-form-item>
+              
+              </div>
+        </div>
+        <div nz-col nzSpan="8" class="data-operation">
+            <button nz-button nz-dropdown nzTrigger="click" [nzDropdownMenu]="sortmenu" [nzPlacement]="'bottomRight'" class="m-r-8 m-l-8">
+                <img src="/assets/images/sort-icon.svg" alt="sort" /> <span>Sort by</span> <i nz-icon nzType="down"></i></button>
+            <nz-dropdown-menu #sortmenu="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item>Date Created (Newest first)</li>
+                <li nz-menu-item>Date Created (Older first)</li>
+              </ul>
+            </nz-dropdown-menu>
+
+        </div>
+
+        <div nz-col nzSpan="8" class="text-right">
+            <button nz-button nzType="primary" nzShape="round" class="add-btn" (click)="showModal()">Add FAQ</button>
+        </div>
+
+
+
+    </div>
+
+
+    <nz-card [nzBordered]="false" class="mt-10">
+    <section  class="faq_section">
+       
+            <div nz-row>
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <div>
+                        <h3>Fee</h3>
+                    </div>
+
+                    <nz-collapse class="faq_collapsable">
+                        <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name"
+                            [nzActive]="panel.active" [nzDisabled]="panel.disabled"
+                            [nzExtra]="panel.active?extraTpl2:extraTpl" (nzActiveChange)="changePanel(panel)"
+                            [nzShowArrow]="false">
+                            <p style="margin:0;">
+                                {{panel.answer}}
+                            </p>
+                        </nz-collapse-panel>
+                    </nz-collapse>
+                </div>
+            </div>
+     
+    </section>
+
+    <section class="faq_section">
+       
+            <div nz-row>
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <div>
+                        <h3>Information</h3>
+                    </div>
+                    <nz-collapse class="faq_collapsable">
+                        <nz-collapse-panel *ngFor="let panel of buyerPanels1" [nzHeader]="panel.name"
+                            [nzActive]="panel.active" [nzDisabled]="panel.disabled"
+                            [nzExtra]="panel.active?extraTpl2:extraTpl" (nzActiveChange)="changePanel(panel)"
+                            [nzShowArrow]="false">
+                            <p style="margin:0;">
+                                {{panel.answer}}
+                            </p>
+                        </nz-collapse-panel>
+                    </nz-collapse>
+                </div>
+            </div>
+       
+    </section>
+
+    <section class="faq_section">
+        
+            <div nz-row>
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <div>
+                        <h3>Meeting</h3>
+                    </div>
+                    <nz-collapse class="faq_collapsable">
+                        <nz-collapse-panel *ngFor="let panel of generalPanels" [nzHeader]="panel.name"
+                            [nzActive]="panel.active" [nzDisabled]="panel.disabled"
+                            [nzExtra]="panel.active?extraTpl2:extraTpl" (nzActiveChange)="changePanel(panel)"
+                            [nzShowArrow]="false">
+                            <p style="margin:0;">
+                                {{panel.answer}}
+                            </p>
+                        </nz-collapse-panel>
+                    </nz-collapse>
+                </div>
+            </div>
+       
+    </section>
+    <section class="faq_section">
+      
+            <div nz-row>
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <div>
+                        <h3>Financial Planning</h3>
+                    </div>
+                    <nz-collapse class="faq_collapsable">
+                        <nz-collapse-panel *ngFor="let panel of financial_planning_panels" [nzHeader]="panel.name"
+                            [nzActive]="panel.active" [nzDisabled]="panel.disabled"
+                            [nzExtra]="panel.active?extraTpl2:extraTpl" (nzActiveChange)="changePanel(panel)"
+                            [nzShowArrow]="false">
+                            <p style="margin:0;">
+                                {{panel.answer}}
+                            </p>
+                        </nz-collapse-panel>
+                    </nz-collapse>
+                </div>
+            </div>
+       
+    </section>
+    <section class="faq_section">
+            <div nz-row>
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <div>
+                        <h3>Miscellaneous</h3>
+                    </div>
+                    <nz-collapse class="faq_collapsable">
+                        <nz-collapse-panel *ngFor="let panel of miscellanious_panels" [nzHeader]="panel.name"
+                            [nzActive]="panel.active" [nzDisabled]="panel.disabled"
+                            [nzExtra]="panel.active?extraTpl2:extraTpl" (nzActiveChange)="changePanel(panel)"
+                            [nzShowArrow]="false">
+                            <p style="margin:0;">
+                                {{panel.answer}}
+                            </p>
+                        </nz-collapse-panel>
+                    </nz-collapse>
+                </div>
+            </div>
+      
+    </section>
+
+</nz-card>
+
+</div>
+<ng-template #extraTpl>
+    <i nz-icon nzType="plus" nzTheme="outline"></i>
+</ng-template>
+<ng-template #extraTpl2>
+    <i nz-icon nzType="minus" nzTheme="outline"></i>
+</ng-template>
+
+
+<nz-modal [(nzVisible)]="isVisible" [nzWrapClassName]="'adminfaq-modal'" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" [nzFooter]="null" >
+  <ng-container *nzModalContent>
+    <h2>Add Question </h2>
+    <nz-divider></nz-divider>
+    <form nz-form [formGroup]="addFaqForm" class="addForm">
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6" nzFor="category">Category</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+                 <!-- <input nz-dropdown [nzDropdownMenu]="menu" nz-input name="category" type="category" id="category"> -->
+                 <button nz-button nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomLeft" class="dropdown-btn">Select Category
+                    <span nz-icon nzType="down"></span>
+                 </button>
+                  <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu>
+                      <li nz-menu-item>Information</li>
+                      <li nz-menu-item>Meeting</li>
+                      <li nz-menu-item>Add New Category</li>
+                    </ul>
+                  </nz-dropdown-menu>
+                
+            </nz-form-control>
+          </nz-form-item >
+            <nz-form-item>
+              <nz-form-label [nzSpan]="6" nzFor="email">Question</nz-form-label>
+              <nz-form-control [nzSpan]="14">
+                <input nz-input name="email" type="email" id="email">
+              </nz-form-control>
+            </nz-form-item >
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="answer">Answer</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <textarea rows="4" nz-input name="answer" id="answer"></textarea>
+                </nz-form-control>
+            </nz-form-item >
+           
+              <nz-divider></nz-divider>
+              <div nz-row class="text-right">
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <button nz-button type="button" nzShape="round" [nzLoading]="loading" nzType="primary" (click)="validateForm()" class="btn-primary"> Add</button>
+                </div>
+            </div>
+    </form>
+  </ng-container>
+</nz-modal>

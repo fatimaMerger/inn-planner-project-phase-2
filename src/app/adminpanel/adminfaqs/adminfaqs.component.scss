@@ -1,0 +1,140 @@
+@import './../../../variables.scss';
+:host ::ng-deep {
+    .faq_collapsable {
+        //  max-width: 800px;
+        margin: 0 auto;
+        border: none;
+
+        .ant-collapse-item {
+            border-color: #e7e9ee;
+        }
+
+        .ant-collapse-header {
+            font-size: 16px;
+            line-height: 60px;
+            color: #13171f;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: #ffffff;
+
+            .ant-collapse-extra {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #00BFFF ;
+                margin: 10px 0;
+                border-radius: 4px;
+
+                i {
+                    color: #FFF ;
+                }
+            }
+        }
+
+        .ant-collapse-item-active {
+            border-bottom-color: #fff;
+
+            .ant-collapse-header {
+                font-weight: 600;
+
+                .ant-collapse-extra {
+                    background-color: #00BFFF ;
+
+                    i {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .ant-collapse-content {
+            .ant-collapse-content-box {
+                padding: 22px 30px;
+                border-radius: 4px;
+                background-color: #f9f9f9;
+
+                p {
+                    color: #3B414D;
+                    font-size: 16px;
+                    letter-spacing: 0;
+                    line-height: 28px;
+                }
+            }
+        }
+
+        .ant-collapse-content-active {
+            border-top-color: #fff;
+        }
+    }
+
+
+    .faq_section {
+        .ant-tabs-tab {
+            padding: 0px;
+            margin: 0px 20px;
+
+            .ant-tabs-tab-btn {
+                padding: 10px 0px;
+                margin: 0px;
+                font-size: 18px;
+                line-height: 37px;
+                font-weight: 400;
+                border-bottom: 2px solid transparent;
+                border-right: none;
+                border-left: none;
+                border-top: none;
+                color: #13171f;
+                font-weight: 400;
+            }
+        }
+
+        .ant-tabs-tab.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+                font-weight: 600;
+            }
+        }
+
+        .ant-tabs-tabpane {
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #13171f;
+                margin-bottom: 24px;
+                // padding-top: 80px;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+.outer-section {
+ 
+      .faq_section{
+        h3{
+            font-size: 20px;
+            color: #214F76;
+            font-weight: 600;
+            margin-bottom: 0;
+            margin-top: 20px;
+        }
+      }
+
+}
+
+.addForm{
+    .ant-form-item-label{
+        text-align: left;
+    }
+    .ant-btn{
+        height: 36px;
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 32px;
+        width: 120px;
+    }
+}
+

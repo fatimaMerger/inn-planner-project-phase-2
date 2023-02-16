@@ -1,0 +1,182 @@
+<section class="admin-contact">
+    <div class="outer-section">
+      <div nz-row>
+        <div nz-col nzSpan="24" class="text-right">
+            <button nz-button nzType="primary" nzShape="round" class="add-btn" >Add Content</button>
+        </div>
+    </div>
+      <nz-card [nzBordered]="false" class="mt-10">
+        <nz-table #basicTable [nzData]="listOfData" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center main-head">A. Vision and Mission Statements for investors</th>
+                </tr>
+                <tr>
+                    <th colspan="2"  class="text-primary text-left">Vision: <span class="text-dark">Invest with knowledge & safety</span></th>
+                </tr>
+                <tr>
+                    <th class="bg-white text-primary">Mission</th>
+                    <th class="bg-white">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons">
+                  <a><span nz-icon nzType="edit" nzTheme="outline" (click)="showEditModal()"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+
+          <nz-table #basicTable2 [nzData]="listOfData2" class="mt-10" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center main-head">B. Details of business transacted by the Investment Adviser with respect to the investors</th>
+                </tr>
+                <tr>
+                    <th class="bg-white text-primary">Onboarding of Clients</th>
+                    <th class="bg-white text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable2.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons text-right">
+                  <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+
+          <nz-table #basicTable3 [nzData]="listOfData3" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th class="bg-white text-primary">Disclosure to Clients</th>
+                    <th class="bg-white text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable3.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons text-right">
+                  <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+
+
+          <nz-table #basicTable4 [nzData]="listOfData4" class="mt-10" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center main-head">D. Details of grievance redressal mechanism and how to access it</th>
+                </tr>
+                <tr>
+                    <th class="bg-white text-primary">Text</th>
+                    <th class="bg-white text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable4.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons text-right">
+                  <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+          
+          <nz-table #basicTable5 [nzData]="listOfData5" class="mt-10" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center main-head">E. Expectations from the investors (Responsibilities of investors)</th>
+                </tr>
+                <tr>
+                    <th class="bg-white text-primary">Do's</th>
+                    <th class="bg-white text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable5.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons text-right">
+                  <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+      
+          <nz-table #basicTable6 [nzData]="listOfData6" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th class="bg-white text-primary">Dont's</th>
+                    <th class="bg-white text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable6.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons text-right">
+                  <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+      
+          <nz-table #basicTable7 [nzData]="listOfData7" class="mt-10" [nzFrontPagination]="false">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center main-head">F. Governing Law and Jurisdiction</th>
+                </tr>
+                <tr>
+                    <th class="bg-white text-primary">Text</th>
+                    <th class="bg-white text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable7.data">
+                <td>{{data.name}}</td>
+                <td class="action-icons text-right">
+                  <a><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+                  <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+      
+      
+      
+      
+        </nz-card> 
+    </div>
+    
+
+    <nz-modal [(nzVisible)]="isVisible2" [nzWrapClassName]="'adminfaq-modal'" (nzOnCancel)="handleCancel2()" (nzOnOk)="handleOk2()" [nzFooter]="null" >
+      <ng-container *nzModalContent>
+        <h2>Edit Investor Form</h2>
+        <nz-divider></nz-divider>
+        <form nz-form [formGroup]="updateInvestorForm" class="addForm">
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="description">Description</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <textarea rows="4" nz-input name="description" id="description"></textarea>
+                </nz-form-control>
+            </nz-form-item >
+              <nz-divider></nz-divider>
+              <div nz-row class="text-right">
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <button nz-button type="button" nzShape="round" nzType="primary" (click)="validateForm()" class="btn-primary">Update</button>
+                </div>
+            </div>
+    </form>
+      </ng-container>
+    </nz-modal> 
+</section>
+

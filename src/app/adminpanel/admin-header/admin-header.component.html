@@ -1,0 +1,32 @@
+<nz-header class="header-top">
+    <div nz-row nzGutter="16" class="margin-lr">
+      <div nz-col nzSpan="13">
+        <h4 class="title-page">Admin Page Title</h4>
+      </div>
+  
+      <div nz-col class="text-right" nzSpan="11">
+        <ul nz-menu [nzMode]="'horizontal'" class="nav-top-right pull-right 111">
+          <li nz-menu-item>
+            <a nz-dropdown [nzDropdownMenu]="settingsZzDropdownMenu" [nzPlacement]="'bottomRight'" [nzOverlayClassName]="'top-nav-dropdown'">
+              <div class="account-icon">
+                <img  class="user-icon" src="/assets/images/user.png" alt="user icon" />
+              </div>
+              Ajay Pruthi
+              <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+            </a>
+            <nz-dropdown-menu #settingsZzDropdownMenu>
+              <ul nz-menu class="nav-dropdown">
+                <li nz-menu-item>
+                  <a>Settings</a>
+                </li>
+                <li nz-menu-item>
+                  <a (click)="logout()">Logout</a>
+                </li>
+              </ul>
+            </nz-dropdown-menu>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nz-header>
+  

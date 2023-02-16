@@ -1,0 +1,66 @@
+@import './../../../variables.scss';
+
+:host ::ng-deep {
+    .ant-table-thead {
+        >tr {
+            >th {
+                color:#fff  ;
+                font-weight: 600;
+                font-size: 13px;
+                letter-spacing: .5px;
+                background: #214f76;
+                &:not(:last-child) {
+                    &:not(.ant-table-selection-column) {
+                        &:not(.ant-table-row-expand-icon-cell) {
+                            &:not([colspan]) {
+                                &::before {
+                                    background-color: rgb(202 194 194 / 23%);
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ant-table-filter-trigger {
+        color: #ffffff;
+    }
+
+
+.ant-table-tbody {
+	>tr {
+		>td {
+			padding: 10px;
+		}
+	}
+}
+.ant-table-thead {
+	>tr {
+		>th {
+			padding: 10px;
+		}
+	}
+}
+
+}
+
+.ant-form-item-label {
+   text-align: left;
+}
+.outer-section .filter-dropdown-search {
+    box-shadow:none; 
+    background-color: transparent; 
+    padding:0px;
+    max-width: 250px;
+}
+.admin-contact{
+    .icon-group {
+        .anticon{
+            margin: 0 5px 0 0;
+            cursor: pointer;
+        }
+       
+    }
+}

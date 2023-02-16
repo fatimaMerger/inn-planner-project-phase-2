@@ -1,0 +1,268 @@
+@import './../../../variables.scss';
+
+:host ::ng-deep {
+    .faq_collapsable {
+        //  max-width: 800px;
+        margin: 0 auto;
+        border: none;
+
+        .ant-collapse-item {
+            border-color: #e7e9ee;
+        }
+
+        .ant-collapse-header {
+            font-size: 18px;
+            line-height: 60px;
+            color: #13171f;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: #ffffff;
+
+            .ant-collapse-extra {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #00BFFF ;
+                margin: 10px 0;
+                border-radius: 4px;
+
+                i {
+                    color: #FFF ;
+                }
+            }
+        }
+
+        .ant-collapse-item-active {
+            border-bottom-color: #fff;
+
+            .ant-collapse-header {
+                font-weight: 600;
+
+                .ant-collapse-extra {
+                    background-color: #00BFFF ;
+
+                    i {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .ant-collapse-content {
+            .ant-collapse-content-box {
+                padding: 28px 30px 30px;
+                border-radius: 4px;
+                background-color: #f9f9f9;
+
+                p {
+                    color: #3B414D;
+                    font-size: 16px;
+                    letter-spacing: 0;
+                    line-height: 28px;
+                }
+            }
+        }
+
+        .ant-collapse-content-active {
+            border-top-color: #fff;
+        }
+    }
+
+    .faq_section {
+        .ant-tabs-tab {
+            padding: 0px;
+            margin: 0px 20px;
+
+            .ant-tabs-tab-btn {
+                padding: 10px 0px;
+                margin: 0px;
+                font-size: 18px;
+                line-height: 37px;
+                font-weight: 400;
+                border-bottom: 2px solid transparent;
+                border-right: none;
+                border-left: none;
+                border-top: none;
+                color: #13171f;
+                font-weight: 400;
+            }
+        }
+
+        .ant-tabs-tab.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+                font-weight: 600;
+            }
+        }
+
+        .ant-tabs-tabpane {
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #13171f;
+                margin-bottom: 24px;
+                // padding-top: 80px;
+                text-align: center;
+            }
+        }
+    }
+
+    .faq-bottom {
+        text-align: center;
+        background-color: #fff;
+        padding: 0 0 90px 0px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #13171f;
+            margin-bottom: 24px;
+            padding-top: 80px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #13171f;
+            letter-spacing: -0.23px;
+            margin-bottom: 30px;
+
+            a {
+                color: rgba(0, 0, 0, .85);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.HomeBanner {
+    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/FAQs-min-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+
+.banner-heading-top {
+    text-align: center;
+    padding: 180px 0px 167px 0px;
+
+    h1 {
+        font-size: 42px;
+        color: $white;
+        font-weight: 300;
+        line-height: 52px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    p {
+        margin-top: 40px;
+        font-size: 18px;
+        color: $white;
+        padding: 0px 30px;
+    }
+}
+
+.faq_section {
+    // padding-top: 140px;
+    padding-bottom: 120px;
+    background: #fff;
+
+    .faq-header {
+        &::after {
+            content: "";
+            position: absolute;
+            right: unset;
+            width: 502px;
+            height: 309.72px;
+            opacity: 0.1;
+            top: 45%;
+            background: linear-gradient(270deg, rgba(74, 144, 226, 0) 0%, #4A90E2 100%);
+            left: 0px;
+            clip-path: polygon(1% 20%, 78% 0, 78% 73%, 0 93%);
+            left: -54%;
+        }
+
+        h2 {
+            color: #13171F;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 47px;
+            margin-top: 20px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 3px;
+                left: auto;
+                right: auto;
+                margin: 0 auto;
+                background-color: #00BFFF ;
+                top: -26px;
+            }
+
+            span {
+                font-weight: bold;
+                display: block;
+            }
+        }
+    }
+}
+
+
+// for mobile resp:
+@media (max-width: 480px) {
+    :host::ng-deep {
+        .faq_collapsable {
+            .ant-collapse-header {
+                line-height: 24px;
+            }
+        }
+    }
+
+    .faq_section {
+        padding: 20px 15px 0;
+        margin-bottom: 0px;
+
+        .faq-header {
+            h2 {
+                margin-top: 0px;
+                font-size: 24px;
+                letter-spacing: 0;
+                line-height: 28px;
+                margin-bottom: 32px;
+            }
+
+            &::after {
+                content: " ";
+                display: none;
+            }
+        }
+    }
+
+    .banner-heading-top {
+        padding: 180px 50px 120px 50px;
+
+        h1 {
+            font-size: 32px;
+            // padding: 0px 20px;
+            line-height: 32px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+<div class="outer-section">
+    <div nz-row >
+        <div nz-col nzSpan="24" class="data-operation">
+            <button nz-button nz-dropdown nzTrigger="click" [nzDropdownMenu]="sortmenu" [nzPlacement]="'bottomRight'" class="m-r-8 m-l-8">
+                <img src="/assets/images/sort-icon.svg" alt="sort" /> <span>Sort by</span> <i nz-icon nzType="down"></i></button>
+            <nz-dropdown-menu #sortmenu="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item>Date Created (Newest first)</li>
+                <li nz-menu-item>Date Created (Older first)</li>
+              </ul>
+            </nz-dropdown-menu>
+
+        </div>
+    </div>
+ 
+   
+      <div class="testimonial_page">
+            <section class="testimonials">
+                <div nz-row nzGutter="8">
+                    <div nz-col nzSpan="6">
+                        <div class="add-testimonial-box" (click)="showModal()">
+                            <div class="add-icon">
+                              <i nz-icon nzType="plus" nzTheme="outline"></i>
+                            </div>
+                            <h3>Add Testimonial</h3>
+                          </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="body">
+                           <a nz-dropdown [nzDropdownMenu]="menu">
+                            <span nz-icon nzType="small-dash" nzTheme="outline" ></span>
+                          </a>
+                          <nz-dropdown-menu #menu="nzDropdownMenu">
+                            <ul nz-menu>
+                              <li nz-menu-item (click)="showEditModal()">Edit</li>
+                              <li nz-menu-item>Delete</li>
+                            </ul>
+                          </nz-dropdown-menu>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            It has survived not only five centuries, but also the leap into electronic typesetting, 
+                            remaining essentially unchanged. 
+                            </p>
+                            <h2>Adam Smith<span>Baton Rouge, LA</span></h2>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="body">
+                           
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                             when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                             It has survived not only five centuries, but also the leap into electronic typesetting, 
+                             remaining essentially unchanged. 
+                             </p>
+                             <h2>Adam Smith<span>Baton Rouge, LA</span></h2>
+                         </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="body">
+                            
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                             when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                             It has survived not only five centuries, but also the leap into electronic typesetting, 
+                             remaining essentially unchanged. 
+                             </p>
+                             <h2>Adam Smith<span>Baton Rouge, LA</span></h2>
+                         </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="body">
+                           
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                             when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                             It has survived not only five centuries, but also the leap into electronic typesetting, 
+                             remaining essentially unchanged. 
+                             </p>
+                             <h2>Adam Smith<span>Baton Rouge, LA</span></h2>
+                         </div>
+                    </div>
+                </div>
+           
+            </section>
+      
+    </div>
+  
+
+
+    <nz-modal [(nzVisible)]="isVisible" [nzWrapClassName]="'adminfaq-modal'" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" [nzFooter]="null" >
+        <ng-container *nzModalContent>
+          <h2>Add Testimonial</h2>
+          <nz-divider></nz-divider>
+          <form nz-form [formGroup]="addFaqForm" class="addForm">
+                  <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+                    <nz-form-control [nzSpan]="14">
+                      <input nz-input name="name" type="name" id="name">
+                    </nz-form-control>
+                  </nz-form-item >
+                  <nz-form-item>
+                      <nz-form-label [nzSpan]="6" nzFor="location">Address</nz-form-label>
+                      <nz-form-control [nzSpan]="14">
+                        <input nz-input name="location" id="location">
+                      </nz-form-control>
+                  </nz-form-item >
+                  <nz-form-item>
+                      <nz-form-label [nzSpan]="6" nzFor="category">Add Review</nz-form-label>
+                      <nz-form-control [nzSpan]="14">
+                        <textarea rows="4" nz-input name="comment" id="comment"></textarea>
+                      </nz-form-control>
+                    </nz-form-item >
+                    <nz-divider></nz-divider>
+                    <div nz-row class="text-right">
+                      <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                          <button nz-button type="button" nzShape="round" [nzLoading]="loading" nzType="primary" (click)="validateForm()" class="btn-primary"> Add</button>
+                      </div>
+                  </div>
+          </form>
+        </ng-container>
+      </nz-modal>   
+
+      <nz-modal [(nzVisible)]="isVisible2" [nzWrapClassName]="'adminfaq-modal'" (nzOnCancel)="handleCancel2()" (nzOnOk)="handleOk2()" [nzFooter]="null" >
+        <ng-container *nzModalContent>
+          <h2>Edit Testimonial</h2>
+          <nz-divider></nz-divider>
+          <form nz-form [formGroup]="addFaqForm" class="addForm">
+                  <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+                    <nz-form-control [nzSpan]="14">
+                      <input nz-input name="name" type="name" id="name">
+                    </nz-form-control>
+                  </nz-form-item >
+                  <nz-form-item>
+                      <nz-form-label [nzSpan]="6" nzFor="location">Address</nz-form-label>
+                      <nz-form-control [nzSpan]="14">
+                        <input nz-input name="location" id="location">
+                      </nz-form-control>
+                  </nz-form-item >
+                  <nz-form-item>
+                      <nz-form-label [nzSpan]="6" nzFor="category">Add Review</nz-form-label>
+                      <nz-form-control [nzSpan]="14">
+                        <textarea rows="4" nz-input name="comment" id="comment"></textarea>
+                      </nz-form-control>
+                    </nz-form-item >
+                    <nz-divider></nz-divider>
+                    <div nz-row class="text-right">
+                      <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                          <button nz-button type="button" nzShape="round" [nzLoading]="loading" nzType="primary" (click)="validateForm()" class="btn-primary">Update</button>
+                      </div>
+                  </div>
+          </form>
+        </ng-container>
+      </nz-modal>   
+</div>
+
+
+  
+    
+  
+    

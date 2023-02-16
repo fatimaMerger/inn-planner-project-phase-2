@@ -1,0 +1,71 @@
+<section class="admin-contact">
+    <div class="outer-section">
+        <div nz-row>
+            <div nz-col nzSpan="24" class="text-right">
+                <button nz-button nzType="primary" nzShape="round" class="add-btn" >Add Video</button>
+            </div>
+        </div>
+      <nz-card [nzBordered]="false" class="mt-10">
+        <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed" >
+          <thead>
+            <tr>
+              <th>Video Link</th>
+              <th>Video Title</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of nzTable.data">
+              <td><a class="text-dark-blue">{{ data.video}}</a></td>
+              <td>{{ data.videoText}}</td>
+              <td class="icon-group">
+               <a (click)="showEditModal()"><span nz-icon nzType="edit" nzTheme="outline" ></span></a> 
+                <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+              </td>
+            </tr>
+          </tbody>
+      </nz-table>
+      </nz-card> 
+    </div>
+    
+
+    <nz-modal [(nzVisible)]="isVisible2" [nzWrapClassName]="'adminfaq-modal'" (nzOnCancel)="handleCancel2()" (nzOnOk)="handleOk2()" [nzFooter]="null" >
+      <ng-container *nzModalContent>
+        <h2>Edit Contact Page</h2>
+        <nz-divider></nz-divider>
+        <form nz-form [formGroup]="updatestartForm" class="addForm">
+            <nz-form-item>
+              <nz-form-label [nzSpan]="6" nzFor="videoText">Video text</nz-form-label>
+              <nz-form-control [nzSpan]="14">
+                <input nz-input name="uploadVideo" id="uploadVideo" id="callbtn">
+              </nz-form-control>
+            
+            </nz-form-item >
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="uploadVideo">Upload Video</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <nz-upload class="upload-btn"
+                    nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                    [nzHeaders]="{ authorization: 'authorization-text' }"
+                    (nzChange)="handleChange($event)"
+                  >
+                    <button nz-button >
+                      <span nz-icon nzType="upload"></span>
+                      Click to Upload
+                    </button>
+                  </nz-upload>
+                  </nz-form-control>
+            </nz-form-item >
+          
+           
+              <nz-divider></nz-divider>
+              <div nz-row class="text-right">
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <button nz-button type="button" nzShape="round" [nzLoading]="loading" nzType="primary" (click)="validateForm()" class="btn-primary">Update</button>
+                </div>
+            </div>
+    </form>
+      </ng-container>
+    </nz-modal>   
+</section>
+

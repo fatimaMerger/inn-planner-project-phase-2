@@ -1,0 +1,81 @@
+@import './../../../variables.scss';
+.HomeBanner {
+    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/testimonials-min-2.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+.banner-heading-top {
+    padding: 147px 0px 44px 0px;
+  
+    h1 {
+      font-size: 44px;
+      color: $white;
+      line-height: 52px;
+      font-weight: 700;
+    }
+    p.Listing-plans-start {
+      text-shadow: 0 1px 0 rgb(0 0 0 / 25%);
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      margin-top: 0px;
+      margin-bottom: 0px
+    }
+  }
+.testimonials{
+    .body{
+        padding: 30px 30px 30px 30px;
+        box-shadow: 0 0 35px 0 rgb(93 114 128 / 15%);
+        max-width: 980px;
+        margin: 20px auto;
+    img{
+        display: block;
+         height: 50px;
+    }
+    p{
+        margin:20px 0;
+    }    
+    h2{
+        font-size: 16px;
+        color: #5d7280;
+        font-weight: 500;
+     span{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        color:#000;
+     }
+    }
+    }
+    
+}
+  @media (max-width: 480px) {
+    .HomeBanner{
+      background-position: center;
+    }
+    .banner-heading-top {
+        h1 {
+          line-height: 38px;
+        }
+        p.Listing-plans-start {
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+      }
+      .testimonial_page{
+        overflow: hidden;
+        .testimonials{
+          .body{
+            padding: 30px;
+            max-width: 340px;
+            margin: 20px auto;
+        }
+        } 
+      }
+      
+  }

@@ -1,0 +1,100 @@
+@import './../../../variables.scss';
+
+.text-left{
+    text-align: left !important;
+}
+
+.testimonials{
+    .body{
+        padding: 18px;
+        box-shadow: 0 0 35px 0 rgb(93 114 128 / 15%);
+        background: #fff;
+        max-width: 980px;
+        margin: 20px auto;
+        border-radius: 6px;
+        min-height: 375px;
+        a{
+            float: right;
+            .anticon{
+                transform: rotate(90deg);
+                font-size: 26px;
+                color: #afafaf;
+                cursor: pointer;
+                position: absolute;
+                right: 7px;
+                top: 34px;
+            }
+        }
+        
+    img{
+        display: block;
+         height: 50px;
+    }
+    p{
+        margin:20px 0;
+    }    
+    h2{
+        font-size: 16px;
+        color: #5d7280;
+        font-weight: 500;
+     span{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        color:#000;
+     }
+    }
+    }
+    .add-testimonial-box{
+        border-radius: 6px;
+        border: none;
+        text-align: center;
+        padding: 38px;
+        width: 100%;
+        margin-top: 20px;
+        min-height: 375px;
+        background: #fff;
+        box-shadow: 0 0 35px 0 rgb(93 114 128 / 15%);
+        .add-icon {
+          border-radius: 50%;
+          display: block;
+          box-shadow: 0 10px 20px -10px #00BFFF;
+          width: 90px;
+          height: 90px;
+          background: $primary;
+          margin: 36px auto 30px;
+          line-height: 90px;
+          cursor: pointer;
+      
+          i {
+            color: $white;
+            font-size: 32px;
+            vertical-align: middle;
+       
+          }
+        }
+      
+        h3 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $modal-h-clr;
+          margin-bottom: 60px;
+        }
+
+      }
+      
+      
+}
+
+.addForm{
+    .ant-form-item-label{
+        text-align: left;
+    }
+    .ant-btn{
+        height: 36px;
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 32px;
+        width: 120px;
+    }
+}

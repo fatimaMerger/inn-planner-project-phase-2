@@ -1,0 +1,18 @@
+@keyframes blink {
+    50% {
+        border-right: transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-text {
+        /*display: block;
+        width: 100%;*/
+        vertical-align: middle;
+        display: inline-block;
+        width: auto;
+        clear: both;
+        min-height: 40px;
+        border: none !important;
+    }
+}

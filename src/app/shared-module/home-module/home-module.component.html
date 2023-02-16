@@ -1,0 +1,376 @@
+<section class="sell-home">
+    <div nz-row>
+        <div nz-col nz-col  [nzLg]="{ span:10 , offset: 2 }" [nzMd]="{ span: 10, offset: 2 }" [nzXs]="{ span: 24, offset: 0 }">
+            <h1>Financial Planning Simplified </h1>
+            <!--  -->
+            <h1><ng-template #TypeWriterHost></ng-template></h1>
+            <p>
+                <span>
+                    Experience in handling 500+ fee-only financial planning clients.
+                </span>
+            </p>
+
+            <div class="button-group">
+                <button nz-button nzType="primary" nzsize="large" class="btn-primary" (click)="routeTo('https://plnr.in/auth/signin')">Sign In</button> 
+                <button  nz-button nzType="primary" nzsize="large" class="btn-primary" (click)="routeTo('https://plnr.in/auth/signup')">Sign Up</button>
+            </div>
+        </div>
+       
+        <div nz-col [nzLg]="{ span:12 , offset: 0}" [nzMd]="{ span: 12, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }"
+            class="text-center">
+            <img src="assets/images/financial.png"  alt="Logo" class="sell-img" /> 
+        </div>
+    </div>
+    <div class="btn watch-btn" id="watch-btn" >
+        <div class="watch-btn-inn" id="watch-btn-inn">
+            <img src="assets/images/new.png" alt="play" />
+            <span (click)="showYtVideoModal()">Watch how it works</span>
+        </div>
+    </div>
+</section>
+
+<section class="why_plnr">
+    <div nz-row class="section-heading">
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}">
+            <div class="why_plnr_body">
+                <h2>Why <strong>PLNR?</strong></h2>
+                <p>We believe that our success is measured by our client's success.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="plnr-card">
+    <div nz-row>
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}" class="stacked-hide stacked-item"
+            style="visibility:visible;position:sticky;">
+            <div class="card">
+                <div class="card-body">
+                    <h3>50% Less Fee</h3>
+                    <p>We charge around 50% less fee that our counterparts in the financial industry.</p>
+                    <img src="assets/images/less-fee.svg" alt="img" />
+                </div>
+            </div>
+        </div>
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}" class="stacked-hide stacked-item"
+            style="visibility:visible;position:sticky;">
+            <div class="card">
+                <div class="card-body">
+                    <h3>No Differential Fee</h3>
+                    <p>No Differential fee is charged based on your residential status or net worth.</p>
+                    <img src="assets/images/diff-fee.svg" alt="img" />
+                </div>
+            </div>
+        </div>
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}" class="stacked-hide stacked-item"
+            style="visibility:visible;position:sticky;">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Seamless Onboarding</h3>
+                    <p>We ensure seamless onboarding. No excel sheets, no signing contracts manually.</p>
+                    <img src="assets/images/register.svg" alt="img" />
+                </div>
+            </div>
+        </div>
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}" class="stacked-hide stacked-item"
+            style="visibility:visible;position:sticky;">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Independent</h3>
+                    <p>Not affiliated with any bank, mutual fund, or insurance company.</p>
+                    <img src="assets/images/independent.svg" alt="img" />
+                </div>
+            </div>
+        </div>
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}" class="stacked-hide stacked-item"
+            style="visibility:visible;position:sticky;">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Fee-Only</h3>
+                    <p>Compensated only with the fee clients pay directly, not earning commissions by any means.</p>
+                    <img src="assets/images/fee-only.svg" alt="img" />
+                 </div>
+            </div>
+        </div>
+        <div nz-col [nzLg]="{ span:24 }" [nzMd]="{ span:24 }" [nzXs]="{ span: 24}" class="stacked-hide stacked-item"
+            style="visibility:visible;position:sticky;">
+            <div class="card">
+                <div class="card-body">
+                    <h3>SEBI RIA</h3>
+                    <p>We are registered with the Securities and Exchange Board of India (SEBI) as an Investment Advisor (INA).</p>
+                    <img src="assets/images/onboarding.svg" alt="img" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how_it_works_title">
+    <div nz-row>
+        <div nz-col [nzLg]="{ span:24 }" [nzXs]="{ span: 24}">
+            <h2>How It <span>Works</span></h2>
+            <p>
+                <span class="d-block">Personalized Goal-based Planning in 6 Steps.</span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="how_it_works">
+    <div class="cards_container">
+        <div class="cards">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Introduction</h3>
+                    <p>We discuss our offerings to address your personalized financial planning needs.</p>
+                    <img src="assets/images/handshake-2.png" alt="img" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Sign up</h3>
+                    <p>We sign an agreement, conduct a compliance check, do risk profiling, and collect fees.</p>
+                    <img src="assets/images/register.svg" alt="img" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Data Collection</h3>
+                    <p>We collect essential data and raise queries if any information is missing.</p>
+                    <img src="assets/images/data-collection.svg" alt="img" />             
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Calculations</h3>
+                    <p>We map your financial goals with existing resources and let you know the monthly investment required to achieve your
+                    goals.</p>
+                    <img src="assets/images/calculation.svg" alt="img" />       
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Final Plan</h3>
+                    <p>We share the financial plan with product recommendations after you approve the calculations.</p>
+                            <img src="assets/images/planning.svg" alt="img" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Implementation</h3>
+                    <p>Finally, you start implementing the plan by yourself. We provide help if you face any problem in implementation.</p>
+                    <img src="assets/images/done.svg" alt="img" />  
+                </div>
+            </div>
+        </div>
+    </div>
+    <button nzbutton="" nztype="primary" nzsize="large" class="viewmore" ><a [routerLink]="['/get-in-touch']">CONTACT
+    US</a></button>
+    <div class="curve_path"></div>
+</section>
+
+<section class="home-section pricing-sec">
+    <div class="bg-layer"></div>
+    <div class="container">
+        <div nz-row class="headings">
+            <div nz-col nzSpan="24">
+                <h2>Our <span>Services</span></h2>
+                <p>
+                    We offer comprehensive financial planning at a flat fixed fee. We do not charge differential fees based on your net
+                    worth or residential status. Our fee is 50% less than our counterparts in the fee-only financial planning business.
+                </p>
+            </div>
+        </div>
+        <div nz-row>
+                <div nz-col [nzXs]="{ span: 24, offset: 0 }" [nzMd]="{ span: 24, offset: 0 }"
+                    [nzLg]="{ span: 24, offset:0 }" class="mobile_scroll">
+                    <div class="card best_value">
+                        <p class="value_text">Best Value</p>
+                        <div class="icon-img">
+                            <img class="list-img" src="assets/images/services.png" alt="professional" />
+                        </div>
+                        <h3>Comprehensive Financial Planning</h3>
+                        <p>Flat Fixed Fee</p>
+                        <h2 class="big_price">Rs. 11,000</h2>
+                        <p class="price-des">per year</p>
+                        <button nz-button nzType="primary" class="buttons">
+                           <a href="/get-in-touch">Contact Us</a> 
+                        </button>
+                        <ul>
+                            <li>Risk Profiling</li>
+                            <li>Review of existing assets and liabilities</li>
+                            <li>Counselling for removing unproductive assets</li>
+                            <li>Assessment of Financial Goals (retirement, child education, housing, vacation, vehicle etc)</li>
+                            <li>Prioritization of Financial Goals</li>
+                            <li>Goal Affordability</li>
+                            <li>Goal-based Investment Advice</li> 
+                            <li>Customized Asset Allocation</li> 
+                            <li>Detailed Investment Plan (including mutual funds)</li> 
+                            <li>Investment in Mutual Fund Direct Plans</li> 
+                            <li>Review of Existing Life Insurance products (ULIPs/LIC etc)</li> 
+                            <li>Review of existing Health and Disability Insurance</li> 
+                            <li>Insurance Adequacy Assessment</li> 
+                            <li>Life/Health/Disability Insurance Strategy & Recommendation</li> 
+                            <li>Tax efficient products</li> 
+                            <li>Consultation for 1 year</li> 
+                            <li>Review after 6 months</li> 
+                            <li>Mode of Delivery: Online</li>
+                            <li>Estimated Delivery Time: 10-15 Days</li>
+                        </ul>
+                        <small>*We do not accept clients having net worth of more than 3 Crores.</small>
+                        <p class="net-worth"> *Net Worth = Net Assets (other than self-occupied home) - Net Liabilities</p>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="home-section testimonial-section">
+    <div class="container">
+        <app-section-heading [title]="'See our customer'" [isHomePage]="true"
+            [spantitle]="'testimonials'"></app-section-heading>
+        <app-slick-testimonials [isFeaturesComponent]="true"></app-slick-testimonials>
+    </div>
+</section>
+
+<section class="reviews_section">
+    <div class="container">
+        <div nz-row>
+            <div nz-col [nzXs]="{ span: 24 }" [nzLg]="{ span: 8, offset:8}" [nzMd]="{ span: 8, offset:8}">
+                <div class="reviews_outer_container">
+                    <img src="https://falaya-global-static-content.s3.us-east-2.amazonaws.com/assets/icons/google-g-2015.svg" width="48px" height="48px" />
+                    <div class="review-box">
+                        <h2>5.0</h2>
+                        <div class="star-div">
+                            <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                            <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                            <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                            <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                            <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                        </div>
+                    </div>
+                    <p>Based on 49 <a>reviews</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="faq_section">
+    <div class="container">
+        <div nz-row>
+            <div nz-col [nzLg]="{ span: 8, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }">
+                <div class="faq-header">
+                    <h2>PLNR <span> Frequently <br />asked questions</span></h2>
+                </div>
+            </div>
+            <div nz-col [nzLg]="{ span:16 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                <nz-collapse class="faq_collapsable">
+                    <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active"
+                        [nzDisabled]="panel.disabled" [nzExtra]="panel.active?extraTpl2:extraTpl"
+                        (nzActiveChange)="changePanel(panel)" [nzShowArrow]="false">
+                        <p style="margin:0;">
+                            {{panel.answer}}
+                        </p>
+                    </nz-collapse-panel>
+                </nz-collapse>
+            </div>
+        </div>
+    </div>
+    <button nzbutton="" nztype="primary" nzsize="large" class="viewmore"><a href="/faqs">Learn More</a></button>
+</section>
+
+<ng-template #extraTpl>
+    <i nz-icon nzType="plus" nzTheme="outline"></i>
+</ng-template>
+<ng-template #extraTpl2>
+    <i nz-icon nzType="minus" nzTheme="outline"></i>
+</ng-template>
+
+
+
+<section class="box-section">
+    <div class="container">
+        <div nz-row>
+            <div nz-col [nzLg]="{ span:12 }" [nzMd]="{ span:24}" [nzXs]="{ span: 24}">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="plnr-description">
+                            <img src="assets/images/blog.svg" alt="img" />
+                            <div class="plnr-info ">
+                                <span>DIY</span>
+                                <h4>Blog</h4>
+                                <p>Extensive and in-depth collection of personal financial lessons.</p>
+                            </div>
+                        </div>
+                        <button nzbutton="" nztype="primary" nzsize="large" class="button" (click)="routeTo('https://plnr.in/blog')"
+                            >Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div nz-col [nzLg]="{ span:12 }" [nzMd]="{ span:24}" [nzXs]="{ span: 24}">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="plnr-description">
+                            <img src="assets/images/calculator.svg" alt="img" />                            <div class="plnr-info ">
+                                <span>DIY</span>
+                                <h4>Calculators</h4>
+                                <p>Free Financial calculators to make an informed decision.</p>
+                            </div>
+                        </div>
+                        <button nzbutton="" nztype="primary" nzsize="large" class="button"
+                            >Launch</button>
+
+                    </div>
+                </div>
+            </div>
+            <div nz-col [nzLg]="{ span:12 }" [nzMd]="{ span:24}" [nzXs]="{ span: 24}">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="plnr-description">
+                            <img src="assets/images/contact.svg" alt="img" class="contact-plnr-img" />                              <div class="plnr-info ">
+                                <h4>Contact PLNR</h4>
+                                <p>Need more information about PLNR?</p>
+                            </div>
+                        </div>
+                        <button nzbutton="" nztype="primary" nzsize="large" class="button" (click)="routeTo('/get-in-touch')"
+                            >Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div nz-col [nzLg]="{ span:12 }" [nzMd]="{ span:24}" [nzXs]="{ span: 24}">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="plnr-description">
+                            <img src="assets/images/planning.svg" alt="img" />                                    <div class="plnr-info ">
+                                <h4>Sample Financial Plan</h4>
+                                <p>Check our financial plan to see how we promote simplicity.</p>
+                            </div>
+                        </div>
+                        <button nzbutton="" nztype="primary" nzsize="large" class="button" (click)="downloadPDF()"
+                            >Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<nz-modal [(nzVisible)]="showVideoModal" [nzWrapClassName]="'vertical-center-modal watch_how_it_works_modal'"
+    (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()" [nzFooter]="null">
+    <ng-container *nzModalContent>
+        <div class="x-modal-body video-container">
+            <div class="x-model-content">
+                <iframe  src="https://www.youtube.com/embed/g9Aq1YtSo-o" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </ng-container>
+</nz-modal>
+

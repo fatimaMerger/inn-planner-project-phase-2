@@ -1,0 +1,265 @@
+<div class="feature_page">
+    <section class="HomeBanner">
+        <div nz-row>
+          <div nz-col nzSm="24" nzMd="24" nzLg="24" nzXl="24">
+            <div class="banner-heading-top">
+              <h1>Get <span>Started</span></h1>
+               <p class="Listing-plans-start">Watch these quick 1-minute videos and read the FAQ page! 
+                <span class="Listing-plans-start2">
+                    In just 15 minutes you'll understand how we can work with you. Then you can get started with PLNR! 
+                   </span>
+                  </p>
+                <div class="infographics">
+                    <div class="card">
+                        <h2>Watch the Videos</h2>
+                        <div class="count">
+                            <p>1</p><img src="assets/images/youtube.png"  alt="logo"/>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Read the FAQ Page</h2>
+                        <div class="count">
+                            <p>2</p><img src="assets/images/reading.png"  alt="logo"/>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Purchase Our Services</h2>
+                        <div class="count">
+                            <p>3</p><img src="assets/images/payment.png"  alt="logo"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <section class="feature-body">
+        <div class="container">
+            <div nz-row>
+                <div *ngIf="isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}"
+                    [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Goal Planning </h2>
+                    </div>
+                </div>
+
+                <div nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 0}" [nzMd]="{ span: 12 , offset: 0}">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/g9Aq1YtSo-o" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/HLZMwd8lJgQ')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                    
+                   </div>
+                <div *ngIf="!isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}" [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Goal Planning </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div nz-row>
+                <div nz-col [nzXs]="{ span: 24,  offset: 0 }" [nzLg]="{ span: 12,  offset: 0}" [nzMd]="{ span: 12,  offset: 0}">
+                    <div class="main-section">
+                        <h2 class="lighter text-left">Guidance</h2>
+                    </div>
+                </div>
+                <div nz-col [nzXs]="{ span: 24,  offset: 0}" [nzLg]="{ span: 10,  offset: 2}" [nzMd]="{ span: 10,  offset: 2 }" class="mt-20">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/sS2gkgHNR3Q"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/oSuB2IS7fhw')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                    
+                   </div>
+
+            </div>
+           
+            <div nz-row>
+                <div *ngIf="isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}"
+                    [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Expectations</h2>
+                    </div>
+                </div>
+                <div nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 0}" [nzMd]="{ span: 12 , offset: 0}">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/fYZ89_HZbGA"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/A_WidsjYGf0')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                    
+                   </div>
+
+                <div *ngIf="!isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}" [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Expectations</h2>
+                    </div>
+                </div>
+            </div>
+        
+                
+            <div nz-row>
+                <div nz-col [nzXs]="{ span: 24,  offset: 0 }" [nzLg]="{ span: 12,  offset: 0}" [nzMd]="{ span: 12,  offset: 0}">
+                    <div class="main-section">
+                        <h2 class="lighter text-left">Planning Process</h2>
+                    </div>
+                </div>
+                <div nz-col [nzXs]="{ span: 24,  offset: 0}" [nzLg]="{ span: 10,  offset: 2}" [nzMd]="{ span: 10,  offset: 2 }" class="mt-20">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/PXGjL0_vkXo"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/Hdbi2q_zKnE')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                    
+                   </div>
+
+            </div>
+
+            <div nz-row>
+                <div *ngIf="isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}"
+                    [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Investment Philosophy</h2>
+                    </div>
+                </div>
+                <div nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 0}" [nzMd]="{ span: 12 , offset: 0}">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/lDJ1Cko6xes"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/xXP69p8SSrs')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                    
+                   </div>
+
+                <div *ngIf="!isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}" [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Investment Philosophy</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div nz-row>
+                <div nz-col [nzXs]="{ span: 24,  offset: 0 }" [nzLg]="{ span: 12,  offset: 0}" [nzMd]="{ span: 12,  offset: 0}">
+                    <div class="main-section">
+                        <h2 class="lighter text-left">Timelines</h2>
+                    </div>
+                </div>
+                <div nz-col [nzXs]="{ span: 24,  offset: 0}" [nzLg]="{ span: 10,  offset: 2}" [nzMd]="{ span: 10,  offset: 2 }" class="mt-20">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/NyCKm9POKb4"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/5HrfTOcXCGw')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                    
+                   </div>
+
+            </div>
+
+            <div nz-row>
+                <div *ngIf="isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}"
+                    [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Clients</h2>
+                    </div>
+                </div>
+                <div nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 0}" [nzMd]="{ span: 12 , offset: 0}">
+                    <iframe width="540" height="315" 
+                    src="https://www.youtube.com/embed/K1TolQQjaK8"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <button  
+                    nz-button
+                    class="hindi_btn"
+                    nzType="default"
+                    (click)="showYtVideoModal('https://www.youtube.com/embed/7ivVjB__SIg')"
+                    nzShape="round">Watch in Hindi
+                    </button>
+                   </div>
+
+                <div *ngIf="!isMobile" nz-col [nzXs]="{ span: 24, offset: 0 }" [nzLg]="{ span: 10, offset: 2}" [nzMd]="{ span: 10, offset: 2 }">
+                    <div class="main-section">
+                        <h2 class="lighter">Clients</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div nz-row class="contact-us-section">
+                <div nz-col nzSpan="24">
+                    <h3>Let's Get Started</h3>
+                    <button  
+                    nz-button
+                    class="contact-btn"
+                    nzType="default"
+                    nzShape="round"><a [routerLink]="['/get-in-touch']" >Contact Now</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </section>     
+</div>
+
+<nz-modal [(nzVisible)]="showVideoModal" [nzWrapClassName]="'vertical-center-modal watch_how_it_works_modal'"
+    (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()" [nzFooter]="null">
+    <ng-container *nzModalContent>
+        <div class="x-modal-body video-container">
+            <div class="x-model-content">
+                <iframe  [src]="source|safe" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </ng-container>
+</nz-modal>

@@ -1,0 +1,72 @@
+<section class="admin-service">
+    <div class="outer-section">
+      <nz-card [nzBordered]="false" class="mt-10">
+        <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed" >
+          <thead>
+            <tr>
+              <th>Heading</th>
+              <th>Sub Heading</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of nzTable.data">
+              <td>{{ data.heading }}</td>
+              <td>{{ data.subheading }}</td>
+              <td>{{ data.price }}</td>
+              <td>{{ data.description }}</td>
+              <td class="icon-group text-center">
+                <a><span nz-icon nzType="edit" nzTheme="outline" (click)="showEditModal()"></span></a>
+                <a><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+              </td>
+            </tr>
+          </tbody>
+      </nz-table>
+      </nz-card>
+       
+        
+    </div>
+    
+
+    <nz-modal [(nzVisible)]="isVisible2" [nzWrapClassName]="'adminfaq-modal'" (nzOnCancel)="handleCancel2()" (nzOnOk)="handleOk2()" [nzFooter]="null" >
+      <ng-container *nzModalContent>
+        <h2>Edit Team Member</h2>
+        <nz-divider></nz-divider>
+        <form nz-form [formGroup]="updateServiceForm" class="addForm">
+            <nz-form-item>
+              <nz-form-label [nzSpan]="6" nzFor="heading">Heading</nz-form-label>
+              <nz-form-control [nzSpan]="14">
+                <input nz-input name="heading" type="heading" id="heading">
+              </nz-form-control>
+            </nz-form-item >
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="subheading">Sub Heading</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                  <input nz-input name="subheading" id="subheading" id="subheading">
+                </nz-form-control>
+            </nz-form-item >
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="price">Price</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <input nz-input name="price" type="price" id="price">
+                </nz-form-control>
+              </nz-form-item >
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="description">Description</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <textarea rows="4" nz-input name="description" id="description"></textarea>
+                </nz-form-control>
+            </nz-form-item >
+              <nz-divider></nz-divider>
+              <div nz-row class="text-right">
+                <div nz-col [nzLg]="{ span:24 , offset: 0 }" [nzXs]="{ span: 24, offset: 0}">
+                    <button nz-button type="button" nzShape="round" [nzLoading]="loading" nzType="primary" (click)="validateForm()" class="btn-primary">Update</button>
+                </div>
+            </div>
+    </form>
+      </ng-container>
+    </nz-modal>   
+</section>
+

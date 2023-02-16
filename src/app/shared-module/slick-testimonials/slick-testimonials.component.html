@@ -1,0 +1,75 @@
+<div nz-row [nzGutter]="{ md: 16, lg: 16, xl: 16, xxl: 16 }" *ngIf="!isFeaturesComponent">
+    <div nz-col nzSpan="24">
+        <div class="testimonial-slider">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigTestimonials"
+                *ngIf="!isServer">
+                <div ngxSlickItem *ngFor="let slide of slidesTestimonials" class="slide"
+                    (deferLoad)="showTestimonial=true">
+                    <div class="testi">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <p>
+                            {{slide.message}}
+                        </p>
+                        <div class="user">
+                            <!-- <div class="user-avatar">
+                                <img src="{{slide.img}}" alt="{{slide.name}}" width="100%" *ngIf=showTestimonial />
+                            </div> -->
+                            <h3>{{slide.name}}</h3>
+                            <p>{{slide.address}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</div>
+
+
+<div nz-row [nzGutter]="{ xs: 0, sm: 0, md: 16, lg: 16, xl: 16, xxl: 16 }" *ngIf="isFeaturesComponent">
+    <div nz-col nzSpan="24">
+        <div class="testimonial-slider">
+            <ngx-slick-carousel class="carousel " #slickModal="slick-carousel"
+                [config]="slideConfigTestimonialsFeatures" *ngIf="!isServer">
+                <div ngxSlickItem *ngFor="let slide of slidesTestimonials" class="slide_feature"
+                    (deferLoad)="showTestimonial=true">
+                    <!-- <div class="testi">
+                        <p>
+                            {{slide.message}}
+                        </p>
+                        <div class="user">
+                            <div class="user-avatar">
+                                <img src="{{slide.img}}" alt="{{slide.name}}" width="100%" *ngIf=showTestimonial />
+                            </div>
+                            <h3>{{slide.name}}</h3>
+                            <p>{{slide.address}}</p>
+                        </div>
+                    </div> -->
+                    <div class="card">
+                        <div>
+                            <div style="display:flex;flex-direction:row;">
+                                <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                                <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                                <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                                <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                                <i nz-icon [nzType]="'star'" [nzTheme]="'fill'" class="star_icon"></i>
+                            </div>
+                            <!-- <br> -->
+                            <p class="message_text">{{slide.message}}</p>
+                            <!-- <br> -->
+                            <div class="image_name">
+                                <!-- <div class="image-container">
+                                    <img src={{slide.img}} class="card_image" />
+                                </div> -->
+                                <div class="user_name">
+                                    <h4>{{slide.name}}</h4>
+
+                                    <p>{{slide.address}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</div>

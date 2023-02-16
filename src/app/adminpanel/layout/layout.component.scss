@@ -1,0 +1,130 @@
+@import './../../../variables.scss';
+#nav-layout {
+  .detail-layout {
+    margin-top: 60px;
+    margin-left: 80px;
+    background-color: $detail-bg;
+    min-height: 100vh;
+  }
+
+
+  .logo {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin: 10px 20px 0px;
+    padding: 0px;
+    border-radius: 8px;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+    img {
+      width: 22px;
+    }
+  }
+
+  .left-nav-fixed {
+    background: $left-nav-clr;
+    z-index: 1000;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+
+    .ant-menu {
+      margin-top: 15px;
+      background: transparent;
+
+      li {
+        background: transparent;
+        margin: -3px;
+        padding: 0px !important;
+        height: auto;
+
+        .svg-icons {
+          fill: $left-nav-icon;
+          color:$left-nav-icon;
+          display: block;
+          text-align: center;
+          padding: 15px 0px;
+          position: relative;
+
+          &:hover {
+            fill: $primary;
+          }
+
+          &:focus {
+            fill: $primary;
+          }
+
+          &:active {
+            fill: $primary;
+          }
+
+          svg {
+            display: block;
+            margin: 0 auto;
+          }
+          .anticon {
+            display: block;
+            width: 24px;
+            height: 24px;
+          }
+
+          .dot {
+            position: absolute;
+            background-color: $red;
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            display: block;
+            top: 22px;
+            right: 22px;
+          }
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+
+        &:hover {
+          outline: none;
+          box-shadow: none;
+        }
+
+        &:active {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      li.ant-menu-item.ant-menu-item-selected {
+        background: transparent;
+
+        .svg-icons {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 992px) {}
+
+
+@media (min-width: 1900px){
+  .ant-menu {
+    li {
+      .svg-icons {
+        padding: 25px 0px;
+      }
+    }
+
+  
+  }
+}

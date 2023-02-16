@@ -1,0 +1,135 @@
+<nz-layout class="layout" id="nav-layout" [hidden]="hideNavbar">
+    <nz-header
+      id="header-top"
+      class="header-top">
+      <div nz-row nzGutter="16">
+        <div nz-col nzSpan="16">
+          <div class="mobile-menu-icon" *ngIf="isMobile && !isToggled" (click)="toggleMobileMenu()">
+            <img src="assets/images/ic-burger-menu.svg" alt="menu icon" />
+          </div>
+          <div class="full-logo" >
+            <img
+              (click)="closeMenu('')"
+              src="assets/images/logo.png"
+              alt="logo"
+              width="96" height="30"
+            />
+          </div>
+  
+          <ul
+            nz-menu
+            [nzMode]="'horizontal'"
+            class="nav-top pull-left"
+          >
+            <li nz-menu-item >
+              <a [routerLink]="['/']" routerLinkActive="router-link-active" > Home </a>
+            </li>
+            <li nz-menu-item  >
+                <a [routerLink]="['/start-here']"> Start Here </a>
+            </li>
+            <li nz-menu-item >
+                <a [routerLink]="['/faqs']"> FAQs </a>
+            </li>
+            <li nz-menu-item >
+                <a [routerLink]="['/services']"> Services</a>
+            </li>
+            <li nz-menu-item >
+              <a [routerLink]="['/about-us']"> About</a>
+          </li>
+            <li nz-menu-item >
+                <a [routerLink]="['/get-in-touch']"> Get in Touch</a>
+            </li>
+            <li nz-menu-item >
+                <a href="https://www.plnr.in/blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div nz-col class="text-right" nzSpan="8"> 
+            <div class="nav-top-right">
+                <a>Sign IN</a>
+                <a>Sign UP</a>
+            </div>
+            <div *ngIf="isMobile" class="right_sign_up">
+              <button nz-button  nzType="default" [routerLink]="['/start-here']">Start Here  </button>
+            </div> 
+         
+        </div>
+      </div>
+    </nz-header>
+  
+    <div class="mobile-menu" *ngIf="isMobile && isToggled">
+      <nz-header>
+        <div nz-row>
+          <div nz-col nzSpan="22">
+            <a (click)="closeMenu('')">
+            <img
+            class="menu-logo"
+              src="assets/images/logo.png"
+              alt="logo"
+            />
+            </a>
+          </div>
+          <div nz-col nzSpan="2">
+            <div class="close" (click)="closeMobileMenu()">
+                <img src="assets/images/ic-burger-close.svg" alt="menu icon"/>
+            </div>
+          </div>
+        </div>
+      </nz-header>
+      <div nz-row>
+        <div nz-col nzSpan="24">
+          <ul>
+            <li 
+            (click)="closeMenu('')"
+              routerLinkActive="ant-menu-item-selected">
+            Home
+            </li>
+            <li  
+              routerLinkActive="ant-menu-item-selected"
+              (click)="closeMenu('start-here')"
+              >
+            Start Here
+            </li>
+            <li 
+            (click)="closeMenu('faqs')"
+            routerLinkActive="ant-menu-item-selected">
+              FAQs
+            </li>
+            <li 
+            (click)="closeMenu('get-in-touch')"
+            routerLinkActive="ant-menu-item-selected">
+              Get in Touch
+            </li>
+            <li 
+            (click)="closeMenu('services')"
+            routerLinkActive="ant-menu-item-selected">
+              Services
+            </li>
+            <li
+            routerLinkActive="ant-menu-item-selected">
+            <a href="https://www.plnr.in/blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div nz-row>
+        <div nz-col nzSpan="10" nzOffset="1">
+          <button
+            nz-button
+            nzType="default"
+            nzShape="round">
+            SIGN IN
+          </button>
+        </div>
+        <div nz-col nzSpan="10" nzOffset="2">
+            <button
+            nz-button
+            nzType="default"
+            nzShape="round">
+            SIGN UP
+          </button>
+        </div>
+      </div>
+    </div> 
+    
+  </nz-layout>

@@ -1,0 +1,102 @@
+@import './../../../variables.scss';
+
+.HomeBanner {
+    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/privacy-policy-min-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 66%;
+    color: $white;
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+
+.banner-heading-top {
+    padding: 180px 0px 45px 0px;
+}
+
+.banner-heading-top h1 {
+    font-size: 42px;
+    color: $white;
+    font-weight: 300;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.section-heading {
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 25px auto 30px;
+    width: 650px;
+
+    h3 {
+        font-size: 26px;
+        font-weight: 300;
+        color: $dark-text-clr;
+        margin-bottom: 20px;
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        left: auto;
+        right: auto;
+        margin: 0px auto;
+        background-color: $primary;
+        top: -22px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        color: $dark-text-clr;
+        letter-spacing: -0.23px;
+    }
+}
+
+.terms.ant-card {
+    box-shadow: none;
+    border: none;
+}
+
+.terms {
+    margin-bottom: 20px;
+
+    p {
+        color: #000000;
+        margin-top: 10px;
+        line-height: 26px;
+        font-weight: 300;
+    }
+
+    h3 {
+        color: #000000;
+    }
+}
+.m-left{
+    margin-left:15px;
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        width: 100%;
+    }
+
+    .terms {
+        padding: 0;
+
+        p {
+            text-align: unset;
+        }
+    }
+
+}

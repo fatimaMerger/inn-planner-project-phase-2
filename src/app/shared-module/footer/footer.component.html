@@ -1,0 +1,213 @@
+<section class="footer-top">
+    <div class="container">
+      <div class="footer-x-space">
+        <div nz-row nzGutter="16">
+          <div nz-col [nzLg]="12" [nzXs]="24">
+            <div class="line-heading">
+              <h4>Ready to get <span>Started?</span></h4>
+              <p>Financial Planning at Rs. 11,000 per year </p>
+              <p class="sub-heading">Fee-Only | No Commission | No Product Selling</p>
+            </div>
+          </div>
+          <div nz-col [nzLg]="12" [nzXs]="24">
+            <button
+              nz-button
+              nzType="default"
+              nzShape="round"
+            >
+            <a href="https://plnr.in/auth/signup">
+              Get Started
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-section">
+    <div class="container">
+      <div class="footer-bottom">
+        <div
+          nz-row
+          [nzGutter]="{ xs: 30, sm: 30, md: 16, lg: 16, xl: 16, xxl: 16 }"
+        >
+          <div
+            nz-col
+            [nzLg]="{ span: 5, offset: 0 }"
+            [nzXs]="{ span: 24, offset: 0 }"
+          >
+            <div class="footer-logo">
+              <img
+                src="assets/images/footer-logo.png"
+                class="rev-Brand-img"
+                width="148px" height="46px" 
+              />
+            </div>
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100077182808940" target="_blank"> <img src="assets/images/facebook_Logo.svg" alt="social-icon"/></a>
+                <a href="https://twitter.com/plnradvisory" target="_blank"> <img src="assets/images/Twitter_Logo.svg" alt="social-icon"/></a>
+                <a href="https://www.youtube.com/@plnradvisory" target="_blank"> <img src="assets/images/youtube_Logo.svg" alt="social-icon" /></a>
+                <a><img src="assets/images/Linkeidn_Logo.svg" alt="social-icon"/></a>
+                <a href=" https://www.instagram.com/plnr_advisory/" target="_blank"><img src="assets/images/insta.svg" alt="social-icon" /></a> 
+            </div>
+            <!-- <div class="about-text">
+              <button 
+              class="btn"
+              nz-button
+              nzType="default"
+              nzShape="round">
+              Get insights
+              </button>
+            </div> -->
+            <div class="copy-text">
+              <p>
+                2021 PLNR - All rights reserved
+              </p>
+            </div>
+          </div>
+  
+          <div
+          nz-col
+          [nzLg]="{ span: 5, offset: 0 }"
+          [nzXs]="{ span: 24, offset: 0 }"
+        >
+          <h4>About Us</h4>
+          <ul>
+            <li [routerLink]="['/about-us']" routerLinkActive="router-link-active" ><a>The Team</a></li>
+            <li [routerLink]="['/testimonials']" routerLinkActive="router-link-active" ><a>Testimonials</a></li>
+            <li [routerLink]="['/terms-and-conditions']" routerLinkActive="router-link-active" ><a>Terms & Conditions</a></li>
+            <li [routerLink]="['/privacy-policy']" routerLinkActive="router-link-active" ><a>Privacy Policy</a></li>
+          </ul>
+        </div> 
+
+          <div
+            nz-col
+            [nzLg]="{ span: 4, offset: 0 }"
+            [nzXs]="{ span: 24, offset: 0 }"
+          >
+            <h4>Learn More</h4>
+            <ul>
+                <li><a href="https://plnr.in/blog">Blog</a></li>
+                <li><a>Calculators</a></li>
+                <li><a (click)="downloadPDF()">Sample Financial Plan </a></li>
+                <li [routerLink]="['/services']" routerLinkActive="router-link-active" ><a>Services</a></li>
+              </ul>
+          </div>
+          <div
+            nz-col
+            [nzLg]="{ span: 5, offset: 0 }"
+            [nzXs]="{ span: 24, offset: 0 }"
+            class="app-col"
+          >
+            <h4>Client Corner</h4>
+            <ul>
+                <li><a (click)="openSEBIModal()">Regulatory Disclosures</a></li>
+                <li [routerLink]="['/sebi-disclosure']" routerLinkActive="router-link-active" ><a>SEBI Disclosures</a></li>
+                <li [routerLink]="['/investor-charter']" routerLinkActive="router-link-active" ><a>Investor Charter </a></li>
+            </ul>
+            
+          </div>
+  
+          <div
+            nz-col
+            [nzLg]="{ span: 5, offset: 0 }"
+            [nzXs]="{ span: 24, offset: 0 }"
+          >
+            <h4>Get in Touch</h4>
+            <ul class="contact-list">
+              <li>
+                <a hre="mailto:support@plnr.in"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="17"
+                    viewBox="0 0 20 17"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-2-4h24v24H-2z" />
+                      <path
+                        stroke="#A2A7B3"
+                        stroke-linejoin="round"
+                        d="M3 1c-1.1 0-1.99.9-1.99 2L1 14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2H3zm14 4l-7 4-7-4"
+                      />
+                    </g>
+                  </svg>
+                  support@plnr.in</a
+                >
+              </li>
+              <li>
+                <a href="callto:+918860000332"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-2-2h24v24H-2z" />
+                      <path
+                        stroke="#A2A7B3"
+                        d="M4.62 8.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V18c0 .55-.45 1-1 1C8.61 19 1 11.39 1 2c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                      />
+                    </g>
+                  </svg>
+                  +91 8860000332</a
+                >
+              </li>
+              <li>
+                <a
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="21"
+                    viewBox="0 0 16 21"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-4-1h24v24H-4z" />
+                      <path
+                        stroke="#A2A7B3"
+                        d="M8 1C4.13 1 1 4.13 1 8c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"
+                      />
+                    </g>
+                  </svg>
+                  63, Pocket-1, Sector-23, Rohini, New Delhi -85</a>
+              </li>
+            </ul>
+          </div>
+           
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nz-modal [(nzVisible)]="showVideoModal" [nzWrapClassName]="'footer-modal'"
+    (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()" [nzFooter]="null">
+    <ng-container *nzModalContent>
+      <h2>Regulatory Disclosures</h2>
+      <div class="content">
+        <p class="fs-12">PLNR Advisory Services (tradename: PLNR) is a SEBI Registered Investment Advisor (INA). SEBI requires RIA's to disclose
+        complaint status on their homepage. Pursuant to the same, please note:</p>
+          <nz-table nzBordered #basicTable [nzData]="listOfData" [nzFrontPagination]="false">
+            <thead>
+              <tr>
+                <th [nzAlign]="'center'">Complaint Status as on 1st May 2023</th>
+                <th [nzAlign]="'center'">Number of complaints</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable.data; let i = index;">
+                <td [nzAlign]="'center'">{{ data.received_from }}</td>
+                <td [nzAlign]="'center'">{{ data.Pending_as_of_last_month }}</td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      
+        <p class="timer-text">This modal closes in {{seconds}} seconds</p>
+        <button nz-button nzType="primary" nzsize="small" class="btn-primary" (click)="handleCancelTop()" >Close</button> 
+    </ng-container>
+</nz-modal>
+
+  
+
+  

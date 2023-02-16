@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="contact-form">
+        <form nz-form [nzLayout]="'vertical'" class="x-form" [formGroup]="supportEmailFormGroup">
+            <div nz-row>
+                <div nz-col [nzLg]="{ span: 8, offset:0 }" [nzXs]="{ span: 24 }" class="hideMobile">
+                    <img src="assets/images/contact.png" alt="contact-us" class="user_img">
+                    <div class="img-description">
+                        <h2>Financial Planning
+                            <span> Redefined.</span>
+                        </h2>
+                            <!-- <div class="contact-info" >
+                                <p>Call Us: <span>+91 8860000332</span></p>
+                                <p>Email Address: <span>support@plnr.in</span></p>
+                                <p>Address:  <span> 63, Pocket-1, Sector-23, Rohini, New Delhi -85</span></p>
+                            </div> -->
+                    </div>
+                
+                </div>
+                <div nz-col [nzLg]="{ span: 12, offset:1 }" [nzXs]="{ span: 24 }">
+                    <div class="form-input">
+                        <h2 class="cntct__text">Contact Us</h2>
+                        <h1>Before you decide about engaging with us, you can have a no-obligation introductory call with us, to learn more about how we can help you.</h1>
+                        <div class="msg-section">
+                            <a nz-button nzType="primary" class="callusbtn" href="callto:+12252896455"><i nz-icon class="phone"
+                                nzType="phone" nzTheme="fill"></i> +91 8860000332</a>
+                                <a nz-button nzType="primary" class="callusbtn" href="mailto:support@plnr.in"><i nz-icon class="email" nzType="mail" nzTheme="fill"></i>
+                                    support@plnr.in</a>
+                        </div>
+                        
+                        <div class="line-sepparator">
+                            For all the basic information about the services offered and the fees, please refer to the <a [routerLink]="['/services']">Services page</a> .
+                        </div>
+                        <div class="msg-section">
+                            <h2>
+                                Send us a message
+                            </h2>
+                        </div>
+                        <nz-form-item>
+                            <nz-form-label nzNoColon>Name</nz-form-label>
+                            <nz-form-control>
+                                <input class="md-inputs" nz-input formControlName="name"
+                                    placeholder="Enter Name" />
+                            </nz-form-control>
+                        </nz-form-item>
+                        <nz-form-item>
+                            <nz-form-label nzNoColon>Email Address</nz-form-label>
+                            <nz-form-control>
+                                <input class="md-inputs" nz-input formControlName="email"
+                                    placeholder="Enter Email Address" />
+                            </nz-form-control>
+                        </nz-form-item>
+                        <nz-form-item>
+                            <nz-form-label nzNoColon>Subject</nz-form-label>
+                            <nz-form-control>
+                                <input class="md-inputs" nz-input formControlName="subject"
+                                    placeholder="Enter Subject" />
+                            </nz-form-control>
+                        </nz-form-item>
+                        <nz-form-item>
+                            <nz-form-label nzNoColon>How can we help you out?</nz-form-label>
+                            <nz-form-control>
+                                <textarea rows="4" nz-input formControlName="message"
+                                    placeholder="Enter Message"></textarea>
+                            </nz-form-control>
+                        </nz-form-item>
+                        <button (click)="submit()" type="button" nz-button nzShape="round" nzType="primary">
+                            <nz-spin *ngIf="loading" nzSimple [nzIndicator]="indicatorTemplate">
+                            </nz-spin>
+
+                            <span *ngIf="!loading">SEND</span>
+                            <ng-template #indicatorTemplate>
+                                <i nz-icon nzType="loading"></i>
+                            </ng-template>
+                        </button>
+
+                        <!-- <button nz-button nzType="default" (click)="submit()">SEND</button> -->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

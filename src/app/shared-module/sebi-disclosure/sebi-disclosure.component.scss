@@ -1,0 +1,116 @@
+@import './../../../variables.scss';
+:host ::ng-deep {
+    .ant-table-thead>tr>th,
+    .ant-table-tbody>tr>td {
+        padding: 12px;
+        font-size: 13px;
+    }
+    .ant-table-thead>tr>th {
+        color: #3f3f3f;
+        background: #00bfff;
+        font-weight: 600;
+    }
+    .ant-table-tbody>tr>td {
+        border-bottom: 1px solid #dedede;
+    }
+
+    // @media (max-width: 480px) {
+    //     .ant-table-wrapper {
+    //         max-width: 380px;
+    //         overflow: auto;
+    //     }
+    // }
+   
+}
+
+
+.HomeBanner {
+    // background-image: url("/assets/images/learn-screen.jpg");
+    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/compliance.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    text-align: center;
+    height: 400px;
+    background-position: center;
+}
+
+.banner-heading-top {
+    padding: 180px 0px 45px 0px;
+}
+
+.banner-heading-top h1 {
+    font-size: 42px;
+    color: $white;
+    font-weight: 300;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.section-heading {
+    position: relative;
+    display: block;
+    margin: 30px auto 30px;
+
+    h3 {
+        font-size: 24px;
+        color: $dark-text-clr;
+        margin-bottom: 00px;
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        color: $dark-text-clr;
+        letter-spacing: -0.23px;
+    }
+}
+
+.terms.ant-card {
+    box-shadow: none;
+    border: none;
+}
+
+.terms {
+    margin-bottom: 20px;
+    h4{
+        font-size: 18px;
+    }
+    p {
+        font: 14px;
+        color: #000000;
+        margin-top: 10px;
+    }
+
+    h3 {
+        color: #000000;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        width: 100%;
+    }
+    .banner-heading-top{
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .terms {
+        padding: 0;
+
+        p {
+            text-align: unset;
+        }
+    }
+    .table-responsive{
+        overflow-x: auto;
+    }
+
+}

@@ -1,0 +1,99 @@
+@import './../../../variables.scss';
+
+.HomeBanner {
+    background-image: url('https://d1um67fy76m42o.cloudfront.net/assets/images/investor-charter-min-12.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+
+.banner-heading-top {
+    padding: 180px 0px 45px 0px;
+}
+
+.banner-heading-top h1 {
+    font-size: 42px;
+    color: $white;
+    font-weight: 300;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.section-heading {
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 25px auto 30px;
+    width: 650px;
+
+    h3 {
+        font-size: 26px;
+        font-weight: 300;
+        color: $dark-text-clr;
+        margin-bottom: 20px;
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        color: $dark-text-clr;
+        letter-spacing: -0.23px;
+    }
+}
+
+.terms.ant-card {
+    box-shadow: none;
+    border: none;
+}
+
+.terms {
+    margin-bottom: 20px;
+    h2{
+        color:#00bfff;
+    }
+    p {
+        font-size: 14px;
+        margin-top: 10px;
+        font-weight: 700;
+    span{
+        color:#000000;
+        margin: 0 10px;
+        font-weight: 400;
+    }
+    }
+
+    h3 {
+        color: #000000;
+    }
+}
+
+.m-left {
+    margin-left: 15px;
+}
+.m-left-2{
+    margin-left: 25px;
+}
+@media (max-width: 480px) {
+    .section-heading {
+        width: 100%;
+    }
+
+    .terms {
+        padding: 0;
+
+        p {
+            text-align: unset;
+        }
+    }
+
+}

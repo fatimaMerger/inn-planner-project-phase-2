@@ -1,0 +1,385 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,500;1,600&display=swap');
+@import './variables.scss';
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.d-flex{
+    display: flex !important;
+}
+.text-right{
+    text-align: right !important;
+}
+.text-primary{
+    color:$primary !important;
+}
+.mt-10{
+    margin-top: 10px !important;
+}
+.search-box {
+    padding: 8px;
+    input {
+        height: 40px;
+        border-radius: 4px;
+        font-weight: 300;
+        width: 188px;
+        margin-bottom: 8px;
+        display: block;
+        &:focus{
+            border-color: #00bfff;
+            box-shadow: 0 0 0 2px #00bfff5c;
+        }
+      }
+      button {
+        width: 90px;
+        height: 32px;
+        border-radius: 6px;
+        font-size: 13px;
+        &:hover {
+            color: #214F76;
+            border-color:#214F76;
+            background: #fff;
+        }
+      }
+  }
+  .search-button {
+    margin-right: 8px;
+    border-color: #214F76;
+    background: #214F76;
+       
+  }
+.outer-section {
+    padding: 24px 30px;
+    .filter-dropdown-search {
+        border-radius: 24px;
+        box-shadow: 1px 1px 0 0 rgb(0 0 0 / 5%);
+        background-color: #fff;
+        padding: 6px 10px 4px 24px;
+        height: 44px;
+    
+        .ant-input-affix-wrapper {
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          background: transparent no-repeat;
+          padding: 0;
+          line-height: 24px;
+          border-left: 1px solid #d8d8d8;
+          vertical-align: middle;
+          padding-left: 16px;
+    
+          input {
+            text-align: left;
+            height: 24px;
+            box-shadow: none;
+            border-radius: 0;
+    
+            margin-left: 6px;
+          }
+        }
+    
+        .ant-btn {
+          border: none;
+          display: inline-block;
+          height: 24px;
+          padding: 0 12px 0 0px;
+          line-height: 24px;
+          border-radius: 0px;
+          box-shadow: none;
+          color: black;
+    
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .data-operation {
+        text-align: right;
+        .ant-btn {
+          border: none;
+          display: inline-block;
+          height: 44px;
+          padding: 0 24px 0 20px;
+          line-height: 40px;
+          border-radius: 24px;
+          box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.05);
+          color: black;
+  
+          &:hover {
+            color: $primary;
+          }
+  
+          span {
+            width: 120px;
+            text-align: left;
+          }
+  
+          img {
+            width: 18px;
+            height: auto;
+            border-radius: unset;
+            margin-right: 8px;
+          }
+        }
+  
+        .ant-select-multiple {
+          .ant-select-selection-placeholder {
+            text-align: left;
+          }
+        }
+  
+        
+      }
+      .add-btn{
+        background: #0898E1;
+        border: #0898E1;
+        font-weight: 500;
+        color: white;
+        width: 170px;
+        height: 42px;
+        text-transform: uppercase;
+        padding: 0px;
+    
+            &:hover {
+              color: white;
+            }
+      }
+     
+
+}
+.ant-modal-mask {
+    background-color: rgb(0 0 0 / 79%);
+}
+.adminfaq-modal.ant-modal-wrap {
+  top:-25px;
+}
+.adminfaq-modal {
+    .ant-modal{
+        width: 900px !important;
+        h2{
+          margin-bottom: 0px;  
+        }
+        .ant-input {         
+            border: 1px solid #e1e0e0;
+            border-radius: 4px;
+            min-height: 42px;
+        }
+        .ant-btn{
+            height: 36px;         
+            font-size: 15px;
+            width: 100px;
+            line-height: 0px;
+        }
+        .dropdown-btn{
+            width: 100% !important;
+            border-radius: 4px !important;
+            text-align: left !important;
+            &:hover{
+                color: #214F76;
+            border-color:#214F76;
+            background: #fff;
+            }
+            &:focus{
+                color: #214F76;
+            border-color:#214F76;
+            background: #fff;
+            }
+            .anticon{
+                position: absolute;
+                top: 11px;
+                right: 8px;
+            }
+        }
+        .ant-upload{
+            button{
+                width: 100% !important;
+                border-radius: 4px !important;
+                text-align: left !important;
+                &:hover{
+                    color: #214F76;
+                border-color:#214F76;
+                background: #fff;
+                }
+                &:focus{
+                    color: #214F76;
+                border-color:#214F76;
+                background: #fff;
+                }
+            }
+        }
+       
+            
+        
+    }
+}
+.watch_how_it_works_modal {
+    .ant-modal{
+        min-width: 1000px !important;
+        margin-top: -50px;
+        .ant-modal-close {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+            border: none;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: -41px;
+            color: #00BFFF;
+            right: -51px;
+            .ant-modal-close-x { 
+                font-size: 23px;
+                .anticon{
+                    position: absolute;
+                    right: 13px;
+                    top: 12px;
+                }
+            }
+            
+        }
+        .ant-modal-body{
+                padding: 0px;
+                height: 540px;
+        }
+        .video-container {
+            padding: 0px;
+            iframe {
+                 width: 100%;
+                 height: 100%;
+                min-height: 540px;
+                vertical-align: middle;
+                border-radius: 2px;
+            }
+        }
+    }
+   
+
+}
+
+.footer-modal{
+ 
+        h2{
+            font-size: 20px;
+            font-weight: 600;
+            color:#214F76;
+            text-align: center;
+        }
+        .anticon{
+            display: none;
+        }
+        .ant-modal-content {
+            border-radius: 6px;
+        }
+        .content{
+            max-width: 402px;
+            margin: 0 auto;
+        }
+        .ant-btn{
+            margin: 5px auto 0px;
+            display: block;
+        }
+}
+
+.mb-0{
+    margin-bottom: 0px !important;
+}
+.d-block {
+    display: block !important;
+}
+.text-muted{
+    color:gray !important;
+}
+.container {
+    width: 1160px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.text-center{
+    text-align: center !important;
+}
+.fs-12{
+    font-size:12px !important;
+}
+.fs-14{
+    font-size:14px !important;
+}
+.mt-30{
+    margin-top: 20px !important;
+}
+.btn-primary{
+    color: $white;
+    background-color: $btn-primary;
+    text-transform: uppercase;
+    border-color: $btn-primary;
+}
+.btn-primary:hover{
+    background-color:transparent;
+    color:$btn-primary;
+    border-color: $btn-primary !important;
+    border: 1px solid !important;
+}
+@media (max-width: 1024px){
+.container{
+    width: 100%;
+}
+}
+
+@media (min-width: 1900px){
+    .watch_how_it_works_modal {
+        .ant-modal{
+            margin-top: 30px;
+            min-width: 1300px !important;
+            .ant-modal-body{
+                    padding: 0px;
+                    height: 600px;
+            }
+            .video-container {
+                padding: 0px;
+                iframe {
+                     width: 100%;
+                     height: 100%;
+                    min-height: 600px;
+                    vertical-align: middle;
+                    border-radius: 2px;
+                }
+            }
+        }
+       
+    
+    }
+}
+
+@media (max-width: 767px){
+    .watch_how_it_works_modal {
+        .ant-modal{
+            margin-top: 30px;
+            min-width: 290px !important;
+            .ant-modal-close {
+                width: 40px;
+                height: 40px;
+                top: -59px;
+                right: 0;
+                .ant-modal-close-x {
+                    font-size: 16px;
+                }
+            }
+            .ant-modal-body{
+                    height: 340px;
+            }
+            .video-container {
+                padding: 0px;
+                iframe {
+                    min-height: 340px;
+                   
+                }
+            }
+        }
+       
+    
+    }
+}
