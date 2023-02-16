@@ -216,7 +216,7 @@ export class AdminTermsConditionComponent implements OnInit {
     {
       key: '4',
       name: 'When you provide us with your personal information either while setting up an account with us or later, it is kept maintained by the division that is responsible for your account management. You can view and/or update/edit this information by logging on to your account through our website, e-mailing us or calling customer service.',
-    },
+    }, 
    
   ];
   listOfData8:terms[]=[
