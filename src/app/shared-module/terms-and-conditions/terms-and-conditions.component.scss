@@ -10,6 +10,17 @@
     text-align: center;
     height: 400px;
 }
+.lower-roman{
+    list-style: lower-roman;
+    li{
+        font-weight: 300;
+        color: #000;
+    }
+
+}
+.lower-alpha{
+    list-style: lower-alpha;
+}
 
 .banner-heading-top {
     padding: 180px 0px 45px 0px;

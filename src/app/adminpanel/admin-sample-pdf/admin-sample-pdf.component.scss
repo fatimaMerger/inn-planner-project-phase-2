@@ -1,0 +1,21 @@
+.ant-card{
+    min-height: 100vh;
+}
+.upload-pdf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .pdf-icon{
+        margin: 90px auto 30px;
+        display: block;
+        font-size: 36px;
+        color: #b1acac;
+    }
+    .add-btn{
+        height: 40px;
+        width: 170px;
+        font-size: 16px;
+        padding: 0;
+    }
+}

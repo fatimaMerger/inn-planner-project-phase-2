@@ -7,7 +7,18 @@
     min-height: 100vh;
   }
 
+@media (min-width: 1900px){
 
+  .ant-menu {
+      li {
+        .svg-icons {
+          padding: 25px 0px !important;
+        }
+      }
+  
+    
+    }
+}
   .logo {
     text-align: center;
     width: 40px;
@@ -112,19 +123,4 @@
     }
   }
   
-}
-
-@media only screen and (max-width: 992px) {}
-
-
-@media (min-width: 1900px){
-  .ant-menu {
-    li {
-      .svg-icons {
-        padding: 25px 0px;
-      }
-    }
-
-  
-  }
 }

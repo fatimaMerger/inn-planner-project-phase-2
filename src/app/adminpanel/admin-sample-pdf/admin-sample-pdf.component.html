@@ -1,1 +1,14 @@
-<p>admin-sample-pdf works!</p>
+<section class="admin-pdf">
+    <nz-card [nzBordered]="false">
+        <div class="upload-pdf">
+            <span nz-icon nzType="file-pdf" nzTheme="outline" class="pdf-icon"></span>
+            <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                [nzHeaders]="{ authorization: 'authorization-text' }" (nzChange)="handleChange($event)">
+                <button nz-button nzType="primary" nzShape="round" class="add-btn">
+                    <span nz-icon nzType="upload"></span>
+                    Upload PDF
+                </button>
+            </nz-upload>
+        </div>
+    </nz-card>
+</section>

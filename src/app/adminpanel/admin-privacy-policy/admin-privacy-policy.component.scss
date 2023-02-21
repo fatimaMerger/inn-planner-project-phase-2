@@ -1,0 +1,48 @@
+:host ::ng-deep {
+    .ant-table-thead {
+        >tr {
+            >th {
+                &:not(:last-child) {
+                    &:not(.ant-table-selection-column) {
+                        &:not(.ant-table-row-expand-icon-cell) {
+                            &:not([colspan]) {
+                                &::before {
+                                    content: '';
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ant-table-thead {
+        >tr {
+            >th {
+                padding: 10px !important;
+            }
+        }
+    }
+    
+}
+.ant-form-item-label {
+    text-align: left;
+ }
+.main-head{
+    background-color: #214f76;
+    color: #fff;
+}
+.action-icons{
+    .anticon{
+        margin:0 5px 0 0;
+    }
+}
+
+.ant-table-tbody {
+	>tr {
+		>td {
+            padding: 10px;	
+		}
+	}
+}
